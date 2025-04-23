@@ -13,7 +13,7 @@ def main():
         return
 
     # 2️⃣ Automatically save log file in fixed path
-    output_dir = r"C:\Users\omara\OneDrive\Desktop\coursework-cyber fund"
+    output_dir = os.path.join(os.environ['USERPROFILE'], 'Desktop', 'coursework-cyber fund')
     os.makedirs(output_dir, exist_ok=True)
     log_path = os.path.join(output_dir, "file.log")
     print(f"[*] Scanning... Log will be saved at: {log_path}")
